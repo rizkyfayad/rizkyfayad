@@ -1,0 +1,22 @@
+@keyframes themeRipple {
+  0% {
+    clip-path: circle(0% at var(--ripple-x) var(--ripple-y));
+    opacity: 0.5;
+  }
+  100% {
+    clip-path: circle(150% at var(--ripple-x) var(--ripple-y));
+    opacity: 0;
+  }
+}
+
+.animate-themeRipple {
+  animation: themeRipple 0.8s ease forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: var(--tw-bg-opacity, 1) currentColor;
+}
